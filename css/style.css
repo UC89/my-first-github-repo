@@ -1,1 +1,45 @@
 /* All style should go in this document. */
+
+/*Available Fonts
+     font-family: 'Poiret One', cursive;
+		 font-family: 'Lobster', cursive;
+		 font-family: 'Amatic SC', cursive;
+*/
+
+	/*includes elements  padding and border in total width and height, the * indicates this affects all elements*/
+* {
+	box-sizing: border-box;
+}
+
+/*left-bar class.*/
+.left-bar {
+	width: 20%;
+  float: left;
+}
+
+/*main class. This is the main part of the page*/
+.main {
+	width: 60%;
+	float: left;
+	background-color: lightblue; /*Set Background color*/
+}
+
+/*right-bar class.*/
+.right-bar {
+	width: 20%;
+	float: left;
+}
+
+.name {
+	padding: 60px;
+	padding-top:10px;
+}
+
+h1 {
+	text-align: center;  /*Centers text*/
+	font-family: 'Amatic SC', cursive;
+}
+
+p {
+	font-family: 'Amatic SC',cursive;
+}
