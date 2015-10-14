@@ -8,8 +8,8 @@ $(document).ready(function(){
     var scroll_pos = 0;
     var animation_begin_pos = 0; //where you want the animation to begin
     var animation_end_pos = 1000; //where you want the animation to stop
-    var beginning_color = new $.Color( 'rgb(210,50,98)' ); //we can set this here, but it'd probably be better to get it from the CSS; for the example we're setting it here.
-    var ending_color = new $.Color( 'rgb(0,197,209)' ); ;//what color we want to use in the end
+    var beginning_color = new $.Color( 'rgb(0,197,209)' ); //we can set this here, but it'd probably be better to get it from the CSS; for the example we're setting it here.
+    var ending_color = new $.Color( 'rgb(210,50,98)' ); ;//what color we want to use in the end
     $(document).scroll(function() {
         scroll_pos = $(this).scrollTop();
         if(scroll_pos >= animation_begin_pos && scroll_pos <= animation_end_pos ) {
@@ -21,11 +21,11 @@ $(document).ready(function(){
             var newBlue = beginning_color.blue() + ( ( ending_color.blue() - beginning_color.blue() ) * percentScrolled );
             var newColor = new $.Color( newRed, newGreen, newBlue );
             //console.log( newColor.red(), newColor.green(), newColor.blue() );
-            $('#main').animate({ backgroundColor: newColor }, 0);
+            $('#main-background').animate({ backgroundColor: newColor }, 0);
         } else if ( scroll_pos > animation_end_pos ) {
-             $('#main').animate({ backgroundColor: ending_color }, 0);
+             $('#main-background').animate({ backgroundColor: ending_color }, 0);
         } else if ( scroll_pos < animation_begin_pos ) {
-             $('#main').animate({ backgroundColor: beginning_color }, 0);
+             $('#main-background').animate({ backgroundColor: beginning_color }, 0);
         } else { }
     });
 });
