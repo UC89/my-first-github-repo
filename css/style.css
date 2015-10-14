@@ -21,7 +21,8 @@
 .main {
 	width: 60%;
 	float: left;
-	background-color: lightblue; /*Set Background color*/
+	background-color: rgb(210,50,98);
+	min-height:3000px; /*Set Background color*/
 }
 
 /*right-bar class.*/
@@ -43,3 +44,12 @@ h1 {
 p {
 	font-family: 'Amatic SC',cursive;
 }
+
+.fixed-button
+{
+	position: fixed;
+	bottom: 10%;
+}
+
+
+
