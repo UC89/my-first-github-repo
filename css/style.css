@@ -34,13 +34,18 @@
 	float: left;
 }
 
-.name {
-	padding: 60px;
-	padding-top:10px;
-}
-
 h1 {
 	text-align: center;  /*Centers text*/
+	font-family: 'Amatic SC', cursive;
+}
+
+h2 {
+	text-align: center;
+	font-family: 'Amatic SC', cursive;
+}
+
+h3 {
+	text-align: center;
 	font-family: 'Amatic SC', cursive;
 }
 
