@@ -36,9 +36,9 @@ $(document).ready(function(){
              $('#main-background').animate({ backgroundColor: beginning_color }, 0);
         } else { }
 
-        //add snowflake rotate and size pulse effect here
     });
 
+//Still should change this to limit curColor to length of color array
     $('h1').on('click',function(){
         console.log('Clicked h1');
         if (curColor<3) {
@@ -51,4 +51,27 @@ $(document).ready(function(){
         console.log('New Color: ',newColor,' array val: ',curColor);
         $(this).css('color',newColor);
     });
+
+//Make icons layout responsive
+
+
+    //Get some basic variables, width of icons and background, check if icons can fit horizontally
+    var numberOfIcons = $('#icon-div img').length;
+    var linkedInIconElement = document.getElementById('linkedin-icon');
+    var mainElement = document.getElementById('main-background');
+    var iconWidth = linkedInIconElement.clientWidth;
+    var backgroundWidth = mainElement.clientWidth;
+    var paddingBetweenElements = ((backgroundWidth-(numberOfIcons*iconWidth))/(numberOfIcons+1))/2;
+
+    //Log values to verify no errors
+    console.log('numberOfIcons: ',numberOfIcons);
+    console.log('iconWidth: ',iconWidth);
+    console.log('backgroundWidth: ',backgroundWidth);
+    console.log('RequiredPadding: ',paddingBetweenElements);
+
+    $('.icon-link').css('padding',paddingBetweenElements)
+
+
+
+
 });

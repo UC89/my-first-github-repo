@@ -1,49 +1,18 @@
 /* All style should go in this document. */
 
-/*Available Fonts
+/*Available Fonts from google fonts api
      font-family: 'Poiret One', cursive;
 		 font-family: 'Lobster', cursive;
 		 font-family: 'Amatic SC', cursive;
 */
 
 	/*includes elements  padding and border in total width and height, the * indicates this affects all elements*/
-
-/* Possible to change color of text as you scroll*/
 * {
 	box-sizing: border-box;
 }
-
-/*left-bar class.*/
-.left-bar {
-	width: 20%;
-  float: left;
-}
-
-/*main class. This is the main part of the page*/
-.main {
-	width: 60%;
-	float: left;
-	min-height:3000px; /*Set Background color*/
-}
-
-#main-background {
-	background: rgb(0,197,209);
-}
-
-/*right-bar class.*/
-.right-bar {
-	width: 20%;
-	float: left;
-}
-
-#snowFlake {
-	display: block;
-	position: absolute;
-	margin: auto;
-	bottom:0;
-	top:0;
-
-}
+/* ----------------------------------------------------------------------------- *
+													Custom css for standard html tags
+*/
 
 h1 {
 	text-align: center;  /*Centers text*/
@@ -70,6 +39,26 @@ p {
 	font-size: 25px;
 }
 
+/* ----------------------------------------------------------------------------- *
+													Custom Classes
+*/
+
+.main {
+	width: 60%;
+	float: left;
+	min-height:3000px; /*This is required for jquery color change on scroll*/
+}
+
+.right-bar {
+	width: 20%;
+	float: left;
+}
+
+.left-bar {
+	width: 20%;
+  float: left;
+}
+
 .credits {
 	font-family: 'Amatic SC',cursive;
 	font-size:20px;
@@ -80,14 +69,26 @@ p {
 	font-size: 25px;
 }
 
-.listlink {
+.list-link {
 	color: rgb(0,197,209);
 	font-family: 'Amatic SC',cursive;
 	font-size: 20px;
 }
 
-.listlinkli {
+.list-link-li {
 	list-style-type: none;
+}
+
+.icon-link {
+	padding:0px;
+}
+
+/* ----------------------------------------------------------------------------- *
+													Custom Id's
+*/
+
+#main-background {
+	background: rgb(0,197,209);  /* Initiates color for jquery color scroll */
 }
 
 
