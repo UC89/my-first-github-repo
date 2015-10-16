@@ -38,7 +38,8 @@
 
 h1 {
 	text-align: center;  /*Centers text*/
-	font-family: 'Amatic SC', cursive;
+	font-family: 'Lobster', cursive;
+	color: white;
 }
 
 h2 {
@@ -49,6 +50,9 @@ h2 {
 h3 {
 	text-align: center;
 	font-family: 'Amatic SC', cursive;
+	color: white;
+	font-size: 30px;
+	padding: 0px
 }
 
 p {
@@ -59,13 +63,16 @@ p {
 
 .list {
 	font-family: 'Amatic SC',cursive;
-	font-size: 20px;
+	font-size: 25px;
 }
+
 .fixed-button
 {
-	position: fixed;
-	bottom: 10%;
+	padding: 10px;
+	font-size: 15px;
+	color: rgb(0,197,209);
 }
+
 
 
 

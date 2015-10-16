@@ -1,4 +1,22 @@
-$(document).ready(function(){
+var headerColor = new Array();
+headerColor[0] = '0,197,209';
+headerColor[1] = '210,50,98';
+headerColor[2] = '0,0,0';
+curColor = 2;
+
+('h1').on('click',function(curColor){
+    if (curColor<2) {
+        curColor += 1;
+    }
+    else {
+        curColor = 0;
+    }
+    newColor=headerColor[curColor]
+    (this).css(newColor)
+})
+
+
+(document).ready(function(){
     //** !!! I copied this from http://jsfiddle.net/cgspicer/V4qh9/ !!! This js file is not my own work
     //** notice we are including jquery and the color plugin at
     //** http://code.jquery.com/color/jquery.color-2.1.0.js
