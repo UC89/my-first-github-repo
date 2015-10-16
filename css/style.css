@@ -36,6 +36,15 @@
 	float: left;
 }
 
+#snowFlake {
+	display: block;
+	position: absolute;
+	margin: auto;
+	bottom:0;
+	top:0;
+
+}
+
 h1 {
 	text-align: center;  /*Centers text*/
 	font-family: 'Lobster', cursive;
@@ -59,6 +68,11 @@ p {
 	font-family: 'Amatic SC',cursive;
 	padding: 2%;
 	font-size: 25px;
+}
+
+.credits {
+	font-family: 'Amatic SC',cursive;
+	font-size:20px;
 }
 
 .list {

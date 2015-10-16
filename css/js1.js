@@ -35,6 +35,8 @@ $(document).ready(function(){
         } else if ( scroll_pos < animation_begin_pos ) {
              $('#main-background').animate({ backgroundColor: beginning_color }, 0);
         } else { }
+
+        //add snowflake rotate and size pulse effect here
     });
 
     $('h1').on('click',function(){
