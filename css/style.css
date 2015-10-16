@@ -66,12 +66,17 @@ p {
 	font-size: 25px;
 }
 
-.fixed-button
-{
-	padding: 10px;
-	font-size: 15px;
+.listlink {
 	color: rgb(0,197,209);
+	font-family: 'Amatic SC',cursive;
+	font-size: 20px;
 }
+
+.listlinkli {
+	list-style-type: none;
+}
+
+
 
 
 

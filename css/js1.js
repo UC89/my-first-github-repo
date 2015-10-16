@@ -1,22 +1,11 @@
 var headerColor = new Array();
-headerColor[0] = '0,197,209';
-headerColor[1] = '210,50,98';
-headerColor[2] = '0,0,0';
-curColor = 2;
+headerColor[0] = 'rgb(0,197,209)';
+headerColor[1] = 'rgb(210,50,98)';
+headerColor[2] = 'rgb(250,250,250)';
+headerColor[3] = 'rgb(102, 255, 102)';
+curColor = 0;
 
-('h1').on('click',function(curColor){
-    if (curColor<2) {
-        curColor += 1;
-    }
-    else {
-        curColor = 0;
-    }
-    newColor=headerColor[curColor]
-    (this).css(newColor)
-})
-
-
-(document).ready(function(){
+$(document).ready(function(){
     //** !!! I copied this from http://jsfiddle.net/cgspicer/V4qh9/ !!! This js file is not my own work
     //** notice we are including jquery and the color plugin at
     //** http://code.jquery.com/color/jquery.color-2.1.0.js
@@ -30,6 +19,7 @@ curColor = 2;
     var ending_color = new $.Color( 'rgb(210,50,98)' ); ;//what color we want to use in the end
     $(document).scroll(function() {
         scroll_pos = $(this).scrollTop();
+        console.log('Scroll Position: ',scroll_pos); //Added line to log scroll position
         if(scroll_pos >= animation_begin_pos && scroll_pos <= animation_end_pos ) {
            // console.log( 'scrolling and animating' );
             //we want to calculate the relevant transitional rgb value
@@ -45,5 +35,18 @@ curColor = 2;
         } else if ( scroll_pos < animation_begin_pos ) {
              $('#main-background').animate({ backgroundColor: beginning_color }, 0);
         } else { }
+    });
+
+    $('h1').on('click',function(){
+        console.log('Clicked h1');
+        if (curColor<3) {
+            curColor += 1;
+        }
+        else {
+            curColor = 0;
+        }
+        newColor = headerColor[curColor];
+        console.log('New Color: ',newColor,' array val: ',curColor);
+        $(this).css('color',newColor);
     });
 });
