@@ -1,42 +1,109 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title> </title>
-        <link rel="stylesheet" href="css/style.css">
-        <script src="js/"></script>
-        <link rel='stylesheet' type='text/css' href='css/style.css'>
-        <script>$(document).ready(function(){
-    //** notice we are including jquery and the color plugin at
-    //** http://code.jquery.com/color/jquery.color-2.1.0.js
+<head>
+	<!DOCTYPE html>
+	<title>Taylor's Resume</title>
 
-    var scroll_pos = 0;
-    var animation_begin_pos = 0; //where you want the animation to begin
-    var animation_end_pos = 1000; //where you want the animation to stop
-    var beginning_color = new $.Color( 'rgb(210,50,98)' ); //we can set this here, but it'd probably be better to get it from the CSS; for the example we're setting it here.
-    var ending_color = new $.Color( 'rgb(0,197,209)' ); ;//what color we want to use in the end
-    $(document).scroll(function() {
-        scroll_pos = $(this).scrollTop();
-        if(scroll_pos >= animation_begin_pos && scroll_pos <= animation_end_pos ) {
-           // console.log( 'scrolling and animating' );
-            //we want to calculate the relevant transitional rgb value
-            var percentScrolled = scroll_pos / ( animation_end_pos - animation_begin_pos );
-            var newRed = beginning_color.red() + ( ( ending_color.red() - beginning_color.red() ) * percentScrolled );
-            var newGreen = beginning_color.green() + ( ( ending_color.green() - beginning_color.green() ) * percentScrolled );
-            var newBlue = beginning_color.blue() + ( ( ending_color.blue() - beginning_color.blue() ) * percentScrolled );
-            var newColor = new $.Color( newRed, newGreen, newBlue );
-            //console.log( newColor.red(), newColor.green(), newColor.blue() );
-            $('body').animate({ backgroundColor: newColor }, 0);
-        } else if ( scroll_pos > animation_end_pos ) {
-             $('body').animate({ backgroundColor: ending_color }, 0);
-        } else if ( scroll_pos < animation_begin_pos ) {
-             $('body').animate({ backgroundColor: beginning_color }, 0);
-        } else { }
-    });
-});</script>
-    </head>
-    <body>
-        <!-- Build your site content here -->
+	<link type='text/css' rel='stylesheet' href='css/style.css'>
 
-    </body>
-</html>
+	<link type='text/css' href='https://fonts.googleapis.com/css?family=Lobster|Poiret+One|Amatic+SC:400,700|Raleway:500' rel='stylesheet'>
+
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+	<script src="https://code.jquery.com/jquery-1.11.3.js"></script>
+	<script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+	<script src="https://code.jquery.com/color/jquery.color-2.1.2.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+
+	<script src='css/js1.js'></script>
+</head>
+
+<body>
+	<div class='nav-bar'>
+		<h2>NavBar</h2>
+	</div>
+	<div class='page-main'>
+	<div class='left-bar'>
+		<h3>This is my resume</h3>
+	</div>
+	<div class='main' id='main-background'>
+		<h1 id='head-1'>Taylor Somma</h1>
+		<h2>taylor.somma@gmail.com | 860-965-6366</h2>
+		<div id='about-me'>
+			<h3 id='about-me'>About Me</h3>
+				<p>I am currently a Computer Information Technology Student at CCSU. I already earned a Bachelor's in Molecular and Cell Biology from UConn but found that I enjoyed the power of computers more. I currently work in healthcare as an EEG Technologist. I hope to one day start a career combining biology and technology in a field such as bioinformatics.</p>
+			</div>
+		<h3>Education</h3>
+			<ul class='list'>
+				<li>Central Connecticut State University</li>
+					<ul>
+						<li>MS Computer Information Technology - 2017</li>
+					</ul>
+				<li>University of Connecticut</li>
+					<ul>
+						<li>BS Molecular and Cell Biology - 2012</li>
+					</ul>
+			</ul>
+		<h3>Work</h3>
+			<ul class='list'>
+				<li>Connecticut Childrens Medical Center</li>
+				<ul>
+					<li>Primary responsibility is to setup and run routine and long-term EEG tests</li>
+					<li>Review and clip long-term EEG's to identify points of interest to aid in physician interpretation
+					</li>
+				</ul>
+			</ul>
+		<h3>Other Experience</h3>
+		<ul class='list'>
+			<li>I am currently enrolled in Udacity's NanoDegree in Data Science. I am learning about how to use the power of computers to find new insights in different datasets. Skills learned so far are: </li>
+			<ul>
+				<li>Basic statistics</li>
+				<li>Python's pandas, numpy, pymongo, csv,json,xml, and  codecs libraries</li>
+				<li>I also learned about finding and cleaning datasets, json, mongodb, and how to make an ipython notebook</li>
+			</ul>
+		</ul>
+
+		<div class='icons' id='icon-div'>
+			<span>
+				<a href="https://www.linkedin.com/pub/taylor-somma/43/879/927">
+					<img class='icon-link' id='linkedin-icon' src='icons/linkedin.svg'>
+				</a>
+			</span>
+			<span>
+				<a href='https://plus.google.com/u/0/104496311478291932197/posts'>
+					<img class='icon-link'  src='icons/google-plus.svg'>
+				</a>
+			</span>
+			<a href='https://plus.google.com/u/0/104496311478291932197/posts'>
+				<img class='icon-link'  src='icons/facebook2.svg'>
+			</a>
+			<a href='https://plus.google.com/u/0/104496311478291932197/posts'>
+				<img class='icon-link'  src='icons/twitter.svg'>
+			</a>
+			<a href='https://github.com/UC89'>
+				<img class='icon-link'  src='icons/github.svg'>
+			</a>
+		</div>
+
+		<div class='credits'>
+    	<p>Credits</p>
+    	<p>
+    	Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a>             is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0">CC BY 3.0</a>
+    </p>
+    </div>
+	</div>
+
+	<div class='right-bar'>
+		<h3>This is the right bar</h3>
+		<div class='center-image'>
+			<img id='snow-flake' src='icons/snow94.svg'>
+		</div>
+	</div>
+</div>
+</body>
