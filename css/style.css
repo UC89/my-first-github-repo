@@ -1,52 +1,59 @@
 /* All style should go in this document. */
 
-/*Available Fonts from google fonts api
+/*
+		  Available Fonts from google fonts api
      font-family: 'Poiret One', cursive;
 		 font-family: 'Lobster', cursive;
 		 font-family: 'Amatic SC', cursive;
 */
 
 	/*includes elements  padding and border in total width and height, the * indicates this affects all elements*/
+
 * {
 	box-sizing: border-box;
 }
-/* ----------------------------------------------------------------------------- *
+/*
 													Custom css for standard html tags
 */
 
 h1 {
 	text-align: center;  /*Centers text*/
-	font-family: 'Lobster', cursive;
+	font-family: 'Raleway',sans-serif;
 	color: white;
 }
 
 h2 {
 	text-align: center;
-	font-family: 'Amatic SC', cursive;
+	font-family: 'Raleway',sans-serif;
 }
 
 h3 {
 	text-align: center;
-	font-family: 'Amatic SC', cursive;
+	font-family: 'Raleway',sans-serif;
 	color: white;
 	font-size: 30px;
 	padding: 0px
 }
 
+
 p {
-	font-family: 'Amatic SC',cursive;
+	font-family: 'Raleway',sans-serif;
 	padding: 2%;
 	font-size: 25px;
 }
 
-/* ----------------------------------------------------------------------------- *
+/*
 													Custom Classes
 */
+.page-main{
+	width:100%;
+	float: left;
+}
 
 .main {
 	width: 60%;
 	float: left;
-	min-height:3000px; /*This is required for jquery color change on scroll*/
+	/*min-height:3000px; /*This is required for jquery color change on scroll*/
 }
 
 .right-bar {
@@ -60,18 +67,19 @@ p {
 }
 
 .credits {
-	font-family: 'Amatic SC',cursive;
+	font-family: 'Raleway',sans-serif;
 	font-size:20px;
+	text-align: center;
 }
 
 .list {
-	font-family: 'Amatic SC',cursive;
+	font-family: 'Raleway',sans-serif;
 	font-size: 25px;
 }
 
 .list-link {
 	color: rgb(0,197,209);
-	font-family: 'Amatic SC',cursive;
+	font-family: 'Raleway',sans-serif;
 	font-size: 20px;
 }
 
@@ -79,16 +87,44 @@ p {
 	list-style-type: none;
 }
 
-.icon-link {
-	padding:0px;
+.icons {
+	width:100%;
+	display: table;
+
 }
+
+.icon-link {
+	width:80px;
+	height:80px;
+	display: table-cell;
+}
+
+.center-image {
+	text-align: ;
+}
+
 
 /* ----------------------------------------------------------------------------- *
 													Custom Id's
 */
-
 #main-background {
-	background: rgb(0,197,209);  /* Initiates color for jquery color scroll */
+	background: rgb(174,198,230);  /* Initiates color for jquery color scroll */
+}
+
+#snow-flake {
+	position: fixed;
+	margin: auto;
+	top: 0px;
+	width: 45px;
+	height: 45px;
+	color: rgb(255,100,255);
+	transform: none;
+	visibility: visible;
+}
+
+#about-me {
+	/*background: rgb(100,198,230);*/
+	border-radius: 20px
 }
 
 

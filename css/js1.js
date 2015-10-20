@@ -1,21 +1,64 @@
 var headerColor = new Array();
 headerColor[0] = 'rgb(0,197,209)';
-headerColor[1] = 'rgb(210,50,98)';
-headerColor[2] = 'rgb(250,250,250)';
-headerColor[3] = 'rgb(102, 255, 102)';
+headerColor[1] = 'rgb(210,50,98)';      //red
+headerColor[2] = 'rgb(250,250,250)';    //white
+headerColor[3] = 'rgb(102, 255, 102)';  //green
 curColor = 0;
 
 $(document).ready(function(){
+    //Still should change this to limit curColor to length of color array
+    $('h1').on('click',function(){
+        numColors = headerColor.length;
+        console.log('Clicked h1');
+        if (curColor<numColors) {
+            curColor += 1;
+        }
+        else {
+            curColor = 0;
+        }
+        newColor = headerColor[curColor];
+        console.log('New Color: ',newColor,' array val: ',curColor);
+        $(this).css('color',newColor);
+    });
+
+    $('#about-me').on('click',function(){
+        console.log('Clicked about me');
+        var visible='hidden';
+        $('#snow-flake').css('visibility:',visible);
+    });
+
+    //Make icons layout responsive
+    /*
+    $( window).resize(function() {
+    //Get some basic variables, width of icons and background, check if icons can fit horizontally
+        var numberOfIcons = $('#icon-div img').length;
+        var linkedInIconElement = document.getElementById('linkedin-icon');
+        var mainElement = document.getElementById('main-background');
+        var iconWidth = linkedInIconElement.clientWidth;
+        var backgroundWidth = mainElement.clientWidth;
+        var widthToCenter = (backgroundWidth-(numberOfIcons*iconWidth))/(numberOfIcons+3)+'px';
+
+        //Log values to verify no errors
+        console.log('numberOfIcons: ',numberOfIcons);
+        console.log('iconWidth: ',iconWidth);
+        console.log('backgroundWidth: ',backgroundWidth);
+        console.log('RequiredPadding: ',widthToCenter);
+        //Change padding of .icon-link element
+        $('.icon-link').css('margin',widthToCenter)
+    });
+    */
     //** !!! I copied this from http://jsfiddle.net/cgspicer/V4qh9/ !!! This js file is not my own work
     //** notice we are including jquery and the color plugin at
     //** http://code.jquery.com/color/jquery.color-2.1.0.js
-
-    //** Working on making this animate only .main class
-
+    var mainDivElement = document.getElementById('main-background');
+    var pageHeight = mainDivElement.clientHeight-1000
+    var windowHeight = window.innerHeight;
+    ;
+    console.log('Page Height: ',pageHeight)
     var scroll_pos = 0;
     var animation_begin_pos = 0; //where you want the animation to begin
-    var animation_end_pos = 1000; //where you want the animation to stop
-    var beginning_color = new $.Color( 'rgb(0,197,209)' ); //we can set this here, but it'd probably be better to get it from the CSS; for the example we're setting it here.
+    var animation_end_pos = pageHeight; //where you want the animation to stop
+    var beginning_color = new $.Color( 'rgb(174,198,230)' ); //we can set this here, but it'd probably be better to get it from the CSS; for the example we're setting it here.
     var ending_color = new $.Color( 'rgb(210,50,98)' ); ;//what color we want to use in the end
     $(document).scroll(function() {
         scroll_pos = $(this).scrollTop();
@@ -36,42 +79,15 @@ $(document).ready(function(){
              $('#main-background').animate({ backgroundColor: beginning_color }, 0);
         } else { }
 
+        //Add rotating snowflake on side
+        degreesRotated = 'rotate('+percentScrolled*2+'turn)';
+        pxToMove = (scroll_pos/pageHeight)*windowHeight*1.4+'px';
+        newSnowX = percentScrolled*50+10+'px'
+        newSnowY = percentScrolled*50+10+'px'
+        $('#snow-flake').css('transform',degreesRotated);
+        $('#snow-flake').css('top',pxToMove);
+        $('#snow-flake').css('width',newSnowX);
+        $('#snow-flake').css('height',newSnowY);
+
     });
-
-//Still should change this to limit curColor to length of color array
-    $('h1').on('click',function(){
-        console.log('Clicked h1');
-        if (curColor<3) {
-            curColor += 1;
-        }
-        else {
-            curColor = 0;
-        }
-        newColor = headerColor[curColor];
-        console.log('New Color: ',newColor,' array val: ',curColor);
-        $(this).css('color',newColor);
-    });
-
-//Make icons layout responsive
-
-
-    //Get some basic variables, width of icons and background, check if icons can fit horizontally
-    var numberOfIcons = $('#icon-div img').length;
-    var linkedInIconElement = document.getElementById('linkedin-icon');
-    var mainElement = document.getElementById('main-background');
-    var iconWidth = linkedInIconElement.clientWidth;
-    var backgroundWidth = mainElement.clientWidth;
-    var paddingBetweenElements = ((backgroundWidth-(numberOfIcons*iconWidth))/(numberOfIcons+1))/2;
-
-    //Log values to verify no errors
-    console.log('numberOfIcons: ',numberOfIcons);
-    console.log('iconWidth: ',iconWidth);
-    console.log('backgroundWidth: ',backgroundWidth);
-    console.log('RequiredPadding: ',paddingBetweenElements);
-
-    $('.icon-link').css('padding',paddingBetweenElements)
-
-
-
-
 });
