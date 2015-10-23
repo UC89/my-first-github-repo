@@ -51,19 +51,9 @@ p {
 }
 
 .main {
-	width: 60%;
+	width: 100%;
 	float: left;
 	/*min-height:3000px; /*This is required for jquery color change on scroll*/
-}
-
-.right-bar {
-	width: 20%;
-	float: left;
-}
-
-.left-bar {
-	width: 20%;
-  float: left;
 }
 
 .credits {

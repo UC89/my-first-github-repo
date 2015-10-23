@@ -50,6 +50,7 @@ $(document).ready(function(){
     //** !!! I copied this from http://jsfiddle.net/cgspicer/V4qh9/ !!! This js file is not my own work
     //** notice we are including jquery and the color plugin at
     //** http://code.jquery.com/color/jquery.color-2.1.0.js
+
     var mainDivElement = document.getElementById('main-background');
     var pageHeight = mainDivElement.clientHeight-1000
     var windowHeight = window.innerHeight;
@@ -60,6 +61,7 @@ $(document).ready(function(){
     var animation_end_pos = pageHeight; //where you want the animation to stop
     var beginning_color = new $.Color( 'rgb(174,198,230)' ); //we can set this here, but it'd probably be better to get it from the CSS; for the example we're setting it here.
     var ending_color = new $.Color( 'rgb(210,50,98)' ); ;//what color we want to use in the end
+
     $(document).scroll(function() {
         scroll_pos = $(this).scrollTop();
         console.log('Scroll Position: ',scroll_pos); //Added line to log scroll position
