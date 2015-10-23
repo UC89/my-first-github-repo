@@ -21,10 +21,14 @@ $(document).ready(function(){
         $(this).css('color',newColor);
     });
 
+    navbarHeight = $('#nav-bar-id').height()
+    navbarHeightPx = navbarHeight+'px'
+    console.log('Navbar height: ',navbarHeightPx)
+    $('#page-main').css({'padding-top':navbarHeightPx});
+
     $('#about-me').on('click',function(){
         console.log('Clicked about me');
         var visible='hidden';
-        $('#snow-flake').css('visibility:',visible);
     });
 
     //Make icons layout responsive
@@ -82,6 +86,7 @@ $(document).ready(function(){
         } else { }
 
         //Add rotating snowflake on side
+        //Keeping this for now even though graphic was deleted
         degreesRotated = 'rotate('+percentScrolled*2+'turn)';
         pxToMove = (scroll_pos/pageHeight)*windowHeight*1.4+'px';
         newSnowX = percentScrolled*50+10+'px'
