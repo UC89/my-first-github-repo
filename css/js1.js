@@ -75,7 +75,7 @@ $(document).ready(function(){
 
     $(document).scroll(function() {
         scroll_pos = $(this).scrollTop();
-        console.log('Scroll Position: ',scroll_pos); //Added line to log scroll position
+        //console.log('Scroll Position: ',scroll_pos); //Added line to log scroll position
         if(scroll_pos >= animation_begin_pos && scroll_pos <= animation_end_pos ) {
            // console.log( 'scrolling and animating' );
             //we want to calculate the relevant transitional rgb value
