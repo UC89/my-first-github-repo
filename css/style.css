@@ -97,19 +97,21 @@ p {
 	width: 10%;
 }
 .my-pic-container {
-	width:100%;
+	/*width:100%;*/
 }
 
 .my-pic {
-	-ms-transform: rotate(90deg); /* IE 9 */
-  -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
-  transform: rotate(90deg);
 	display: block;
-	width: 20%;
+	width: 40%;
 	height: auto;
 	border-radius: 50%;
 	margin-left: auto;
 	margin-right: auto;
+}
+
+.custom-header {
+	width: 100%;
+	display: block;
 }
 
 
@@ -119,22 +121,6 @@ p {
 */
 #main-background {
 	background: rgb(174,198,230);  /* Initiates color for jquery color scroll */
-}
-
-#snow-flake {
-	position: fixed;
-	margin: auto;
-	top: 0px;
-	width: 45px;
-	height: 45px;
-	color: rgb(255,100,255);
-	transform: none;
-	visibility: visible;
-}
-
-#about-me {
-	/*background: rgb(100,198,230);*/
-	border-radius: 20px
 }
 
 #page-main{
