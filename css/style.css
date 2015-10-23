@@ -87,17 +87,29 @@ p {
 .icon-link {
 	width:80px;
 	height:80px;
-	display: table-cell;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .icon-container {
 	float: left;
 	width: 10%;
 }
+.my-pic-container {
+	width:100%;
+}
 
 .my-pic {
-	width: 50%;
-	rotate: 90;
+	-ms-transform: rotate(90deg); /* IE 9 */
+  -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
+  transform: rotate(90deg);
+	display: block;
+	width: 20%;
+	height: auto;
+	border-radius: 50%;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 

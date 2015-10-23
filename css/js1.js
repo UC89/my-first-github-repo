@@ -55,7 +55,7 @@ $(document).ready(function(){
         console.log('backgroundWidth: ',backgroundWidth);
         console.log('RequiredPadding: ',widthToCenter);
         //Change padding of .icon-link element
-        //$('.icon-container').css('margin',widthToCenter)
+        $('.icon-container').css('padding',widthToCenter)
     });
 
     //** !!! I copied this from http://jsfiddle.net/cgspicer/V4qh9/ !!! This js file is not my own work
