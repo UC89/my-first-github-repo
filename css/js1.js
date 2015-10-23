@@ -31,8 +31,15 @@ $(document).ready(function(){
         var visible='hidden';
     });
 
+    numberOfIcons = $('#icon-div img').length;
+    widthOfIconDiv = (100/numberOfIcons)+'%';
+    console.log('widthOfDiv on load: ',widthOfIconDiv)
+    $('.icon-container').css({'width':widthOfIconDiv});
+
+
     //Make icons layout responsive
-    /*
+    //icon-container and icon-link classes
+
     $( window).resize(function() {
     //Get some basic variables, width of icons and background, check if icons can fit horizontally
         var numberOfIcons = $('#icon-div img').length;
@@ -48,9 +55,9 @@ $(document).ready(function(){
         console.log('backgroundWidth: ',backgroundWidth);
         console.log('RequiredPadding: ',widthToCenter);
         //Change padding of .icon-link element
-        $('.icon-link').css('margin',widthToCenter)
+        //$('.icon-container').css('margin',widthToCenter)
     });
-    */
+
     //** !!! I copied this from http://jsfiddle.net/cgspicer/V4qh9/ !!! This js file is not my own work
     //** notice we are including jquery and the color plugin at
     //** http://code.jquery.com/color/jquery.color-2.1.0.js

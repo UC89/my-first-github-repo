@@ -90,6 +90,11 @@ p {
 	display: table-cell;
 }
 
+.icon-container {
+	float: left;
+	width: 10%;
+}
+
 .center-image {
 	text-align: ;
 }
