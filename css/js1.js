@@ -32,7 +32,7 @@ $(document).ready(function(){
     });
 
     numberOfIcons = $('#icon-div img').length;
-    widthOfIconDiv = (100/numberOfIcons)+'%';
+    widthOfIconDiv = (100/numberOfIcons*2)+'%';
     console.log('widthOfDiv on load: ',widthOfIconDiv)
     $('.icon-container').css({'width':widthOfIconDiv});
 
@@ -58,10 +58,7 @@ $(document).ready(function(){
         $('.icon-container').css('padding',widthToCenter)
     });
 
-    //** !!! I copied this from http://jsfiddle.net/cgspicer/V4qh9/ !!! This js file is not my own work
-    //** notice we are including jquery and the color plugin at
-    //** http://code.jquery.com/color/jquery.color-2.1.0.js
-
+    //** !!! I copied this from http://jsfiddle.net/cgspicer/V4qh9/ !!! The color change on scroll was taken from the above site and modified for mine */
     var mainDivElement = document.getElementById('main-background');
     var pageHeight = mainDivElement.clientHeight-1000
     var windowHeight = window.innerHeight;
@@ -102,6 +99,5 @@ $(document).ready(function(){
         $('#snow-flake').css('top',pxToMove);
         $('#snow-flake').css('width',newSnowX);
         $('#snow-flake').css('height',newSnowY);
-
     });
 });
