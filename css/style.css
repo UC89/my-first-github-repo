@@ -61,14 +61,18 @@ p {
 
 .content-section {
 	border-radius: 50px;
-	padding-top:100px;
-	padding-bottom:100px;
+	padding-top:50px;
+	padding-bottom:50px;
 }
 
-.credits {
+.credits{
 	font-family: 'Raleway',sans-serif;
 	font-size:20px;
 	text-align: center;
+}
+
+.credits p {
+	padding : 0px;
 }
 
 .list {
@@ -140,9 +144,19 @@ p {
 	background: rgb(174,198,245);  /* Initiates color for jquery color scroll */
 }
 
-#page-main{
+#page-main {
 	width:100%;
 	float: left;
+}
+
+#mail-link {
+	color:black;
+}
+
+#mail-link:hover {
+	color: rgb(0,255,128);
+	text-decoration: underline;
+
 }
 
 
