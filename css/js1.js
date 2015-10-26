@@ -72,7 +72,7 @@ $(document).ready(function(){
 
     $(document).scroll(function() {
         scroll_pos = $(this).scrollTop();
-        //console.log('Scroll Position: ',scroll_pos); //Added line to log scroll position
+        console.log('Scroll Position: ',scroll_pos); //Added line to log scroll position
         if(scroll_pos >= animation_begin_pos && scroll_pos <= animation_end_pos ) {
            // console.log( 'scrolling and animating' );
             //we want to calculate the relevant transitional rgb value
@@ -89,15 +89,6 @@ $(document).ready(function(){
              $('#main-background').animate({ backgroundColor: beginning_color }, 0);
         } else { }
 
-        //Add rotating snowflake on side
-        //Keeping this for now even though graphic was deleted
-        degreesRotated = 'rotate('+percentScrolled*2+'turn)';
-        pxToMove = (scroll_pos/pageHeight)*windowHeight*1.4+'px';
-        newSnowX = percentScrolled*50+10+'px'
-        newSnowY = percentScrolled*50+10+'px'
-        $('#snow-flake').css('transform',degreesRotated);
-        $('#snow-flake').css('top',pxToMove);
-        $('#snow-flake').css('width',newSnowX);
-        $('#snow-flake').css('height',newSnowY);
+        /*This is to make content sections rotate through as you scroll */
     });
 });
