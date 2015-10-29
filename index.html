@@ -91,34 +91,43 @@
 					</a>
 				</div>
 			</div>
-
-			<div class='main-content'>
-				<div class='content-section' id='about-me'>
-					<h3>About Me</h3>
-						<p>I am currently a Computer Information Technology Student at CCSU. I already earned a Bachelor's in Molecular and Cell Biology from UConn but found that I enjoyed learning about the power of computers more. I currently work in healthcare as an EEG Technologist. I hope to one day start a career combining biology and technology in a field such as bioinformatics.</p>
-					</div>
-
+			<div class='container-fluid'>
+				<div class='main-content'>
+					<div class='content-section' id='about-me'>
+						<h2>About Me</h2>
+							<p>I am currently a Computer Information Technology Student at CCSU. I already earned a Bachelor's in Molecular and Cell Biology from UConn but found that I enjoyed learning about the power of computers more. I currently work in healthcare as an EEG Technologist. I hope to one day start a career combining biology and technology in a field such as bioinformatics.</p>
+						</div>
+			</div>
 				<!-- Skills section to go here
 				planning on making an interactive bar chart with d3.js
 			  <h3 id='skills'>Skills</h3>-->
-
-			  <div class='content-section'>
-			  	<img  class='icon-spinner' src='icons/uconnHusky.png'>
-					<h3 id='education'>Education</h3>
-						<ul class='list'>
-							<li>Central Connecticut State University</li>
-								<ul>
-									<li>MS Computer Information Technology - 2017</li>
+			<div class='container-fluid' id='education'>
+				<div class='row'>
+				  <div class='content-section'>
+				  	<div class='col-sm-12'>
+				  		<h2>Education</h2>
+				  	</div>
+				  	<div class='col-sm-8'>
+								<ul class='list'>
+									<li>Central Connecticut State University</li>
+										<ul>
+											<li>MS Computer Information Technology - 2017</li>
+										</ul>
+									<li>University of Connecticut</li>
+										<ul>
+											<li>BS Molecular and Cell Biology - 2012</li>
+										</ul>
 								</ul>
-							<li>University of Connecticut</li>
-								<ul>
-									<li>BS Molecular and Cell Biology - 2012</li>
-								</ul>
-						</ul>
-				</div>
+						</div> <!--column-->
+						<div class='col-sm-4'>
+							<img  class='icon-spinner' id='husky' src='icons/uconnHusky.png'>
+						</div>
+					</div> <!--content-section-->
+				</div>  <!--row-->
+			</div>    <!--container-fluid-->
 
 				<div class='content-section'>
-					<h3 id='work'>Work</h3>
+					<h2 id='work'>Work</h2>
 						<ul class='list'>
 							<li>Connecticut Childrens Medical Center</li>
 							<ul>

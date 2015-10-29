@@ -16,8 +16,10 @@ function getElementPosition(elementId) {
 
 
 $(document).ready(function(){
-    //Get vertical position of education
-    var educationPosition = getElementPosition('#education');
+    //Get vertical position and height of education
+    var educationPosition = getElementPosition('#education')[0];
+    var educationHeight = getElementPosition('#education')[1];
+
     console.log('Education Position: ',educationPosition)
     //Still should change this to limit curColor to length of color array
     $('h2').on('click',function(){
@@ -43,9 +45,6 @@ $(document).ready(function(){
     $('#about-me').on('click',function(){
         console.log('Clicked about me');
         var visible='hidden';
-    });
-
-    $( window).resize(function() {
     });
 
     //** !!! I copied this from http://jsfiddle.net/cgspicer/V4qh9/ !!! The color change on scroll was taken from the above site and modified for mine */
@@ -81,6 +80,26 @@ $(document).ready(function(){
              $('#main-background').animate({ backgroundColor: beginning_color }, 0);
         } else { }
 
+
+        var upperLimit = educationPosition-educationHeight*2;
+        var lowerLimit = educationPosition+educationHeight;
+        var maxHuskySize = 200
+        if (scroll_pos >= upperLimit & scroll_pos <=lowerLimit) {
+            var sizePercentage = (scroll_pos-upperLimit)/(lowerLimit-upperLimit)
+            var degreesRotated = 'rotate('+sizePercentage*2+'turn)';
+            var currentSize = $('#husky').height();
+            var newHuskySize = maxHuskySize*sizePercentage;
+            console.log('PageHeight: '+pageHeight)
+            console.log('Upperlimit: '+upperLimit+' LowerLimit: '+lowerLimit);
+            console.log('Size Percentage: '+sizePercentage)
+
+            $('#husky').css('transform',degreesRotated);
+            $('#husky').css('width',newHuskySize);
+            $('#husky').css('height',newHuskySize);
+        }
         /*This is to make content sections rotate through as you scroll */
     });
 });
+
+$( window).resize(function() {
+    });
