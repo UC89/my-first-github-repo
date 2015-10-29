@@ -42,10 +42,6 @@ p {
 	font-size: 25px;
 }
 
-.svg-icon path{
-	fill: rgb(277,25,25);
-}
-
 /*
 													Custom Classes
 */
@@ -90,12 +86,20 @@ p {
 	list-style-type: none;
 }
 
+.list-link-li:hover {}
+
 .icons {
 	width:100%;
-	display: table;
 	padding-top:10px;
 	padding-bottom:10px;
 
+}
+
+.icon-container {
+	float: left;
+	display: inline;
+	width:25%;
+	text-align: center;
 }
 
 .icon-link {
@@ -106,20 +110,12 @@ p {
 	margin-right: auto;
 }
 
-.icon-container {
-	float: left;
-	width: 10%;
-}
-.my-pic-container {
-	/*width:100%;*/
-}
-
 .my-pic {
 	display: block;
 	width: 40%;
 	height: auto;
 	margin-top:50px;
-	border-radius: 50%;
+	border-radius: 10%;
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -129,6 +125,18 @@ p {
 	display: block;
 }
 
+.fa-custom {
+	color: rgb(26,26,26);
+}
+
+.fa-custom:hover {
+	color: rgb(255,146,0);
+}
+
+.icon-spinner {
+	/*visibility: hidden; */
+	position: absolute;
+}
 
 
 /* ----------------------------------------------------------------------------- *
@@ -141,7 +149,7 @@ p {
 }
 
 #main-background {
-	background: rgb(174,198,245);  /* Initiates color for jquery color scroll */
+	background: rgb(6,106,183);  /* Initiates color for jquery color scroll */
 }
 
 #page-main {
@@ -155,8 +163,7 @@ p {
 
 #mail-link:hover {
 	color: rgb(0,255,128);
-	text-decoration: underline;
-
+	text-decoration: none;
 }
 
 

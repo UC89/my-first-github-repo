@@ -5,9 +5,22 @@ headerColor[2] = 'rgb(250,250,250)';    //white
 headerColor[3] = 'rgb(102, 255, 102)';  //green
 curColor = 0;
 
+//This function returns to element vertical position, and height
+function getElementPosition(elementId) {
+    var elementPosition = $(elementId).position();
+    var elementVertical = elementPosition['top'];
+    console.log(elementId, 'Position: ',elementPosition,' From top: ',elementVertical)
+    var elementHeight = $(elementId).height();
+    return [elementVertical,elementHeight];
+}
+
+
 $(document).ready(function(){
+    //Get vertical position of education
+    var educationPosition = getElementPosition('#education');
+    console.log('Education Position: ',educationPosition)
     //Still should change this to limit curColor to length of color array
-    $('h1').on('click',function(){
+    $('h2').on('click',function(){
         numColors = headerColor.length;
         console.log('Clicked h1');
         if (curColor<numColors) {
@@ -21,6 +34,7 @@ $(document).ready(function(){
         $(this).css('color',newColor);
     });
 
+    //This gives the navbar heigh and mkes sure the rest of the page content has enough padding
     navbarHeight = $('#nav-bar-id').height()
     navbarHeightPx = navbarHeight+'px'
     console.log('Navbar height: ',navbarHeightPx)
@@ -31,31 +45,7 @@ $(document).ready(function(){
         var visible='hidden';
     });
 
-    numberOfIcons = $('#icon-div img').length;
-    widthOfIconDiv = (100/numberOfIcons*2)+'%';
-    console.log('widthOfDiv on load: ',widthOfIconDiv)
-    $('.icon-container').css({'width':widthOfIconDiv});
-
-
-    //Make icons layout responsive
-    //icon-container and icon-link classes
-
     $( window).resize(function() {
-    //Get some basic variables, width of icons and background, check if icons can fit horizontally
-        var numberOfIcons = $('#icon-div img').length;
-        var linkedInIconElement = document.getElementById('linkedin-icon');
-        var mainElement = document.getElementById('main-background');
-        var iconWidth = linkedInIconElement.clientWidth;
-        var backgroundWidth = mainElement.clientWidth;
-        var widthToCenter = (backgroundWidth-(numberOfIcons*iconWidth))/(numberOfIcons+3)+'px';
-
-        //Log values to verify no errors
-        console.log('numberOfIcons: ',numberOfIcons);
-        console.log('iconWidth: ',iconWidth);
-        console.log('backgroundWidth: ',backgroundWidth);
-        console.log('RequiredPadding: ',widthToCenter);
-        //Change padding of .icon-link element
-        $('.icon-container').css('padding',widthToCenter)
     });
 
     //** !!! I copied this from http://jsfiddle.net/cgspicer/V4qh9/ !!! The color change on scroll was taken from the above site and modified for mine */
@@ -67,8 +57,10 @@ $(document).ready(function(){
     var scroll_pos = 0;
     var animation_begin_pos = 0; //where you want the animation to begin
     var animation_end_pos = pageHeight; //where you want the animation to stop
-    var beginning_color = new $.Color( 'rgb(174,198,245)' ); //we can set this here, but it'd probably be better to get it from the CSS; for the example we're setting it here.
-    var ending_color = new $.Color( 'rgb(102,255,102)' ); ;//what color we want to use in the end
+    var beginning_color = new $.Color( 'rgb(6,106,183)' ); //we can set this here, but it'd probably be better to get it from the CSS; for the example we're setting it here.
+    var ending_color = new $.Color( 'rgb(236,241,27)' ); ;//what color we want to use in the end
+
+
 
     $(document).scroll(function() {
         scroll_pos = $(this).scrollTop();
