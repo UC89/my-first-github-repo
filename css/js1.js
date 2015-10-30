@@ -103,3 +103,42 @@ $(document).ready(function(){
 
 $( window).resize(function() {
     });
+
+//GOOGLE MAPS TEST---------------------------------------
+//-------------------------------------------------------
+// Load the Visualization API and the piechart package.
+      google.load('visualization', '1.0', {'packages':['corechart']});
+
+      // Set a callback to run when the Google Visualization API is loaded.
+      google.setOnLoadCallback(drawChart);
+
+      // Callback that creates and populates a data table,
+      // instantiates the pie chart, passes in the data and
+      // draws it.
+      function drawChart() {
+
+        // Create the data table.
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Task');
+        data.addColumn('number', '% of Time');
+        data.addRows([
+          ['Setup EEG', 30],
+          ['Review EEG', 30],
+          ['Troubleshoot Computer', 10],
+          ['CME', 10],
+          ['Other', 20]
+        ]);
+
+        // Set chart options
+        var options = {'title':'Breakdown of Time at Work',
+                       'width':300,
+                       'height':300,
+                       is3D:true,
+                       'backgroundColor': {fill:'transparent'}
+                   };
+
+        // Instantiate and draw our chart, passing in some options.
+        var chart = new google.visualization.PieChart(document.getElementById('work-chart'));
+        chart.draw(data, options);
+        }
+        drawChart()

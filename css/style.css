@@ -142,6 +142,13 @@ p {
 	height:0px;
 }
 
+.google-chart {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 300px;
+}
+
 
 /* ----------------------------------------------------------------------------- *
 													Custom Id's
