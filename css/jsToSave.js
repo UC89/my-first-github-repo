@@ -39,3 +39,23 @@ function getElementPosition(elementId) {
     console.log(elementId, 'Position: ',elementPosition,' From top: ',elementVertical)
     return elementVertical;
 }
+
+
+/*
+                                            <ul class='list'>
+                                                <li>Information Technology</li>
+                                                    <ul>
+                                                        <li>CS 500 - Computer Science for CIT</li>
+                                                        <li>CS 501 - Foundations in Computer Science</li>
+                                                        <li>CS 502 - Computing and Communications Tech</li>
+                                                        <li>CET 501 - Applied Networking Technology</li>
+                                                        <li>MIS 501 - Managing IT Value Proposition</li>
+                                                        <li>MIS 502 - Business Payoff Info Tech and Systems</li
+                                                    </ul>
+                                                <li>Molecular and Cell Biology</li>
+                                                    <ul>
+                                                        <li>BIO101</li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+*/
