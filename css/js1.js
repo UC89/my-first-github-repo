@@ -82,8 +82,8 @@ $(document).ready(function(){
 
 
         var upperLimit = educationPosition-educationHeight*2;
-        var lowerLimit = educationPosition+educationHeight;
-        var maxHuskySize = 200
+        var lowerLimit = educationPosition;
+        var maxHuskySize = 200;
         if (scroll_pos >= upperLimit & scroll_pos <=lowerLimit) {
             var sizePercentage = (scroll_pos-upperLimit)/(lowerLimit-upperLimit)
             var degreesRotated = 'rotate('+sizePercentage*2+'turn)';
