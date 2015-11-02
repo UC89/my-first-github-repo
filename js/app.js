@@ -56,14 +56,15 @@ $(document).ready(function(){
     var scroll_pos = 0;
     var animation_begin_pos = 0; //where you want the animation to begin
     var animation_end_pos = pageHeight; //where you want the animation to stop
-    var beginning_color = new $.Color( 'rgb(71,126,150)' ); //we can set this here, but it'd probably be better to get it from the CSS; for the example we're setting it here.
-    var ending_color = new $.Color( 'rgb(240,240,240)' ); ;//what color we want to use in the end
-
-
+    var beginning_color = new $.Color( 'rgb(95,161,255)' ); //we can set this here, but it'd probably be better to get it from the CSS; for the example we're setting it here.
+    var ending_color = new $.Color( 'rgb(142,232,107)' ); ;//what color we want to use in the end
 
     $(document).scroll(function() {
         scroll_pos = $(this).scrollTop();
-        console.log('Scroll Position: ',scroll_pos); //Added line to log scroll position
+
+        //Added line to log scroll position
+        console.log('Scroll Position: ',scroll_pos);
+
         if(scroll_pos >= animation_begin_pos && scroll_pos <= animation_end_pos ) {
            // console.log( 'scrolling and animating' );
             //we want to calculate the relevant transitional rgb value
@@ -81,8 +82,8 @@ $(document).ready(function(){
         } else { }
 
 
-        var upperLimit = educationPosition-educationHeight*2;
-        var lowerLimit = educationPosition;
+        var upperLimit = educationPosition-educationHeight*3;
+        var lowerLimit = educationPosition-educationHeight;
         var maxHuskySize = 200;
         if (scroll_pos >= upperLimit & scroll_pos <=lowerLimit) {
             var sizePercentage = (scroll_pos-upperLimit)/(lowerLimit-upperLimit)

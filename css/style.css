@@ -1,5 +1,3 @@
-/* All style should go in this document. */
-
 /*
 		  Available Fonts from google fonts api
      font-family: 'Poiret One', cursive;
@@ -7,14 +5,9 @@
 		 font-family: 'Amatic SC', cursive;
 */
 
-	/*includes elements  padding and border in total width and height, the * indicates this affects all elements*/
-
 * {
 	box-sizing: border-box;
 }
-/*
-													Custom css for standard html tags
-*/
 
 h1 {
 	text-align: center;  /*Centers text*/
@@ -27,19 +20,10 @@ h2 {
 	font-family: 'Raleway',sans-serif;
 }
 
-h3 {
-	text-align: center;
-	font-family: 'Raleway',sans-serif;
-	color: white;
-	font-size: 30px;
-	padding: 0px
-}
-
-
 p {
 	font-family: 'Raleway',sans-serif;
 	padding: 2%;
-	font-size: 25px;
+	font-size: 2em;
 }
 
 /*
@@ -48,7 +32,9 @@ p {
 .main {
 	width: 100%;
 	float: left;
-	background: rgb(71,126,150);
+	background: rgb(95,161,255);
+	padding-bottom: 1em;
+	padding-top: 1em;
 }
 
 .main-content {
@@ -57,7 +43,7 @@ p {
 }
 
 .content-section {
-	border-radius: 50px;
+	border-radius: 50%;
 	padding-top:50px;
 	padding-bottom:50px;
 }
@@ -74,7 +60,7 @@ p {
 
 .list {
 	font-family: 'Raleway',sans-serif;
-	font-size: 25px;
+	font-size: 2em;
 }
 
 .list-link {
@@ -82,12 +68,6 @@ p {
 	font-family: 'Raleway',sans-serif;
 	font-size: 20px;
 }
-
-.list-link-li {
-	list-style-type: none;
-}
-
-.list-link-li:hover {}
 
 .icons {
 	width:100%;
@@ -116,7 +96,7 @@ p {
 	width: 40%;
 	height: auto;
 	margin-top:50px;
-	border-radius: 10%;
+	border-radius: 10px;
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -127,11 +107,11 @@ p {
 }
 
 .fa-custom {
-	color: rgb(26,26,26);
+	color: black;
 }
 
 .fa-custom:hover {
-	color: rgb(255,146,0);
+	color: rgb(255,174,82);
 }
 
 .icon-spinner {
@@ -160,18 +140,25 @@ p {
 	color: white;
 }
 
-.resume-content {
-	background-color: rgb(255,255,255);
-	border-radius: 10px;
-}
-
 .mail-link {
 	color:black;
 }
 
 .mail-link:hover {
-	color: rgb(0,255,128);
+	color: rgb(232,75,129);
 	text-decoration: none;
+}
+
+.phone-number {
+	color: rgb(0,0,0);
+}
+
+.phone-number:hover {
+	color: rgb(232,75,129);
+}
+
+.phone-number:visited {
+	color: rgb(232,75,129);
 }
 
 /* ----------------------------------------------------------------------------- *
