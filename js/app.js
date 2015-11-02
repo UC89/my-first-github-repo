@@ -104,7 +104,7 @@ $(document).ready(function(){
 $( window).resize(function() {
     });
 
-//GOOGLE MAPS TEST---------------------------------------
+//GOOGLE CHARTS TEST---------------------------------------
 //-------------------------------------------------------
 // Load the Visualization API and the piechart package.
       google.load('visualization', '1.0', {'packages':['corechart']});

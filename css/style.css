@@ -48,6 +48,7 @@ p {
 .main {
 	width: 100%;
 	float: left;
+	background: rgb(71,126,150);
 }
 
 .main-content {
@@ -164,30 +165,16 @@ p {
 	border-radius: 10px;
 }
 
-/* ----------------------------------------------------------------------------- *
-													Custom Id's
-*/
-#page-main{
-	width:100%;
-	float: left;
-	padding-top: 0px;
-}
-
-#main-background {
-	background: rgb(71,126,150);  /* Initiates color for jquery color scroll */
-}
-
-#page-main {
-	width:100%;
-	float: left;
-}
-
-#mail-link {
+.mail-link {
 	color:black;
 }
 
-#mail-link:hover {
+.mail-link:hover {
 	color: rgb(0,255,128);
 	text-decoration: none;
 }
+
+/* ----------------------------------------------------------------------------- *
+													Custom Id's
+*/
 
