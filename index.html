@@ -1,12 +1,12 @@
-<head>
-	<!DOCTYPE html>
-	<!--Bootstrap docs say to add this line -->
+<!DOCTYPE html>
 
+<head>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<title>Taylor's Resume</title>
 
 	<link type='text/css' rel='stylesheet' href='css/style.css'>
+  <link type='text/css' rel='stylesheet' href='css/reset.css'>
 
 	<link type='text/css' href='https://fonts.googleapis.com/css?family=Lobster|Poiret+One|Amatic+SC:400,700|Raleway:500' rel='stylesheet'>
 
@@ -36,7 +36,7 @@
 	<script src='https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.js'></script>
 -->
 
-	<script src='css/js1.js'></script>
+	<script src='css/app.js'></script>
 </head>
 
 <body>
@@ -66,7 +66,7 @@
 	<div id='page-main'>
 		<div class='main' id='main-background'>
 			<div class='my-pic-container'>
-				<img class='my-pic' src='icons/mypic.JPG'>
+				<img class='my-pic' src='img/mypic.JPG'>
 			</div>
 
 			<h2>Taylor Somma</h2>
@@ -129,7 +129,7 @@
 							</div>
 							</div> <!--column-->
 							<div class='col-sm-4'>
-								<img  class='icon-spinner' id='husky' src='icons/uconnHusky.png'>
+								<img  class='icon-spinner' id='husky' src='img/uconnHusky.png'>
 							</div>
 						</div> <!--content-section-->
 					</div>  <!--row-->
@@ -141,11 +141,7 @@
 					  	<div class='col-sm-12'>
 					  		<h2>Work</h2>
 					  	</div>
-					  	<div class='col-sm-4'>
-								<div id='work-chart' class='google-chart'>
-								</div>
-							</div>
-					  	<div class='col-sm-8 resume-content'>
+					  		<div class='col-sm-8 resume-content'>
 									<ul class='list'>
 										<li>Connecticut Childrens Medical Center</li>
 										<ul>
@@ -156,7 +152,10 @@
 										</ul>
 									</ul>
 							</div> <!--column-->
-
+					  	<div class='col-sm-4'>
+								<div id='work-chart' class='google-chart'>
+								</div>
+							</div>
 						</div> <!--content-section-->
 					</div>  <!--row-->
 				</div>    <!--container-fluid-->
