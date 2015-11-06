@@ -26,6 +26,11 @@ p {
 	font-size: 2em;
 }
 
+ul {
+	list-style-type: disc;
+	list-style-position: inside;
+}
+
 /*
 													Custom Classes
 */
@@ -61,6 +66,11 @@ p {
 .list {
 	font-family: 'Raleway',sans-serif;
 	font-size: 2em;
+}
+
+.nested-list {
+	padding-left: 15px;
+	list-style-type: circle;
 }
 
 .list-link {
@@ -109,7 +119,6 @@ p {
 .fa-custom {
 	color: black;
 }
-
 .fa-custom:hover {
 	color: #FFAE52;
 }
