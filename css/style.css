@@ -32,7 +32,7 @@ p {
 .main {
 	width: 100%;
 	float: left;
-	background: rgb(95,161,255);
+	background: #5FA1FF;
 	padding-bottom: 1em;
 	padding-top: 1em;
 }
@@ -64,7 +64,7 @@ p {
 }
 
 .list-link {
-	color: rgb(0,197,209);
+	color: #00C5D1;
 	font-family: 'Raleway',sans-serif;
 	font-size: 20px;
 }
@@ -111,7 +111,7 @@ p {
 }
 
 .fa-custom:hover {
-	color: rgb(255,174,82);
+	color: #FFAE52;
 }
 
 .icon-spinner {
@@ -131,7 +131,7 @@ p {
 }
 
 .resume-content {
-	background-color: rgb(255,255,255);
+	background-color: #FDFDFD;
 	border-radius: 10px;
 }
 
