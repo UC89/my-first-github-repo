@@ -1,2 +1,2 @@
-# my-first-github-repo
-An initial test repo for A100 Apprentices to use to practice on.
+<h1>My Resume Site</h1>
+<p>This website contains information about my work and education history</h1>
